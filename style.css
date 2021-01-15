@@ -54,15 +54,34 @@ h1 {
 h4 {    font-family: 'avertastd-bolduploaded_file';
 }
 a {
+    tcolor: #000;
+    font-weight: 700;
+    line-height: 40px;
+    /* letter-spacing: 5px; */
+    position: relative;
+    display: inline-block;
     text-decoration: none;
-    color: #000;
-    transition: .35s ease-out;
+
 }
 
 a:hover {
-    color: rgb(70, 77, 255);
+    color: #ffee00;
 }
 
+a:before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    transition: .35s ease-out;
+    background-color: #000;
+}
+
+a:hover:before {
+    width: 0;
+}
 .section a {
     font-family: 'avertastd-bolduploaded_file';
     font-weight: 700;
@@ -70,7 +89,7 @@ a:hover {
 }
 
 .section a:hover {
-    color: #000;
+    color: #ffee00;
 }
 
 .doc-loader {
@@ -136,7 +155,7 @@ img.block-right {
     padding-bottom: 85px;
 }
 
-.section .section-des {
+.section .section-des,.section-des2 {
     margin-bottom: 40px;
 }
 
@@ -259,7 +278,7 @@ background-image:url(https://s3.us-west-2.amazonaws.com/secure.notion-static.com
 
 .nav-container .site-title:hover:before {
     width: 0;
-    background-color: rgb(70, 77, 255);
+    background-color: #ffee00;
 }
 
 .nav-btn {
@@ -426,7 +445,7 @@ background-image:url(https://s3.us-west-2.amazonaws.com/secure.notion-static.com
     4. Service Section CSS
 ====================================== */
 
-.section-des {
+.section-des,.section-des2 {
    /* max-width: 440px;*/
     font-size: 22px;
     line-height: 1.65;
@@ -559,6 +578,10 @@ background-image:url(https://s3.us-west-2.amazonaws.com/secure.notion-static.com
 /* ===================================
     6. Portfolio Section CSS
 ====================================== */
+#portfolio {background-color: #e3e3e2;margin-left: -45px;}
+#portfolio h2.title,.section-des2 {margin-left: 45px;}
+
+.sub-text {font-size: 14px;}
 
 .isotope.no-transition,
 .isotope.no-transition .isotope-item,
@@ -619,7 +642,7 @@ background-image:url(https://s3.us-west-2.amazonaws.com/secure.notion-static.com
     top: 0;
     z-index: 1;
     font-size: 20px;
-    background-color: #000000;
+    background-color: #ffee00;
     padding: 20px;
     transform: translateX(-100%);
     transition: transform .3s ease;
@@ -651,14 +674,14 @@ background-image:url(https://s3.us-west-2.amazonaws.com/secure.notion-static.com
     font-size: 28px;
     line-height: 100%;
     font-weight: 700;
-    color: #fff;
+    color: #000;
     margin-bottom: 0;
     padding-bottom: 10px;
 }
 
 .portfolio-cat {
     font-size: 15px;
-    color: #fff;
+    color: #000;
     line-height: 100%;
     font-weight: 400;
     margin-bottom: 0;
@@ -729,7 +752,7 @@ background-image:url(https://s3.us-west-2.amazonaws.com/secure.notion-static.com
 
 .owl-theme .owl-dots .owl-dot span {
     margin: 0;
-    background-color: #000000;
+    background-color: #ffee00;
     transition: all .3s ease;
     width: 30px;
     height: 10px;
@@ -746,7 +769,7 @@ background-image:url(https://s3.us-west-2.amazonaws.com/secure.notion-static.com
 }
 
 .owl-theme .owl-dots .owl-dot.active span {
-    background-color: rgb(70, 77, 255);
+    background-color: #ffee00;
 }
 
 
@@ -866,6 +889,7 @@ div.pp_default .pp_description {
     font-size: 26px;
     margin-right: 30px;
     color: #000;
+    
 }
 
 .home-blog-list li a:hover {
@@ -914,8 +938,8 @@ div.pp_default .pp_description {
     position: absolute;
     left: 28%;
     top: 0;
-    background-color: #fff;
-    width: 3px;
+    background-color: #000;
+    width: 1px;
     height: 100%;
 }
 
@@ -928,6 +952,31 @@ div.pp_default .pp_description {
     max-width: 28%;
     font-weight: 200;
     font-size: 60px;
+    line-height: 30px;
+    transition: .35s ease-out;
+}
+
+.skills-history li:hover .date {
+    -webkit-transform: translateX(15px);
+    transform: translateX(15px);
+    color: #000;
+}
+.skills-history li .date-future {
+    
+    font-weight: 700;
+    flex: 0 0 28%;
+    max-width: 28%;
+    font-size: 60px;
+    line-height: 30px;
+    transition: .35s ease-out;
+}
+
+.skills-history li .future {
+    
+    font-weight: 700;
+    flex: 0 0 28%;
+    max-width: 28%;
+    font-size: 24px;
     line-height: 30px;
     transition: .35s ease-out;
 }
@@ -1531,11 +1580,11 @@ p.contact-submit-holder {
     p,
     .section h2.title,
     .section .section-des,
-    .single-blog .thumbnail-img {
+    .single-blog .thumbnail-img,.section-des2 {
         margin-bottom: 20px;
     }
 
-    .section-des {
+    .section-des,.section-des2 {
         font-size: 18px;
     }
 
@@ -1653,6 +1702,7 @@ p.contact-submit-holder {
         float: none;
         margin-left: 0;
     }
+   
 
     .content-671 {background-color: grey;}
 }
