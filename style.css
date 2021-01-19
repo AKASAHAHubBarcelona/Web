@@ -584,7 +584,7 @@ background-image:url(https://s3.us-west-2.amazonaws.com/secure.notion-static.com
 /* ===================================
     6. Portfolio Section CSS
 ====================================== */
-#portfolio, #skills {background-color: #e8e8e8;margin-left: -55px;}
+#portfolio, #skills {background-color: #f0f0f0;margin-left: -55px;}
 #portfolio h2.title,.section-des2, #skills h2.title {margin-left: 55px;}
 
 .sub-text {font-size: 14px;}
